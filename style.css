@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+
+:root {
+    --color-gray:rgba(158, 153, 153, 0.123);
+    --color-purple: #380d69;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+header {
+    text-align: center;
+}
+
+header div {
+    background-color: var(--color-gray);
+    padding: 30px;
+    border-bottom: 2px solid var(--color-purple);
+}
+
+header div a {
+    padding: 30px;
+    color: white;
+    text-decoration: none;
+    line-height: 10px;
+    font-size: 18px;
+}
+
+header div a:hover {
+    color: var(--color-purple);
+    transition: color, 300ms;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #000000;
+    color: white;
+}
+
+/* === SOBRE === */
+
+#wrapper {
+    padding: 30px;
+    text-align: center;
+}
+
+#wrapper img {
+    width: 250px;
+    border-radius: 50%;
+    border: 6px solid var(--color-gray);
+}
+
+#wrapper h1 {
+    font-size: 50px;
+    line-height: 100px;
+    font-weight: bold;
+    color: var(--color-purple);
+    opacity: 0.7;
+}
+
+#wrapper p {
+    font-size: 20px;
+    max-width: 700px;
+    margin: 20px auto;
+}
+
+#wrapper h2 {
+    font-size: 20px;
+    padding: 10px;
+}
+
+#wrapper ul {
+    line-height: 25px;
+    padding: 0 600px;
+}
+
+/* === SOCIAL === */
+
+#social {
+    text-align: center;
+    padding: 30px;
+}
+
+#social a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    border-bottom: 3px solid var(--color-purple);
+    margin: 10px;
+}
+
+#social a:hover {
+    color: var(--color-purple);
+    transition: color, 200ms;
+    font-weight: bold;
+}
+
+/* === CURSOS === */
+
+.cards {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+} 
+
+.card {
+    background-color: rgba(158, 153, 153, 0.123);
+    border-radius: 20px;
+    border: 5px solid #380d6978;
+}
+
+.image_content {
+    padding: 40px 25px;
+}
+
+.image_content img {
+    width: 100%;
+}
+
+#gostack .image_content {
+    margin: 20px 0 25px 0;
+}
+
+#launchbase .image_content {
+    margin: 45px 0 65px 0;
+}
+
+.info_content, .card_content {
+    padding: 20px;
+}
+
+.card_content {
+    margin: 0 15px;
+    border: 3px solid var(--color-purple);
+}
+
+.card_content p {
+    font-size: 18px;
+    text-align: center;
+}
+
+.info_content {    
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.info_content p {
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 10px;
+    text-align: center;
+}
+
+.price {
+    text-decoration: underline var(--color-purple);
+    margin-left: 40px;
+}
+
+/* === MODAL === */
+
+.modal-overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal {
+    background-color: white;
+    width: 90%;
+    height: 90%;
+    margin: 5vh auto;
+    position: relative;
+}
+
+.modal .close-modal {
+    color: black;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
+}
+
+.modal .fullscreen-icons {
+    color: black;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    cursor: pointer;
+}
+
+
+/* === MODAL.ACTIVE === */
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content iframe {
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    top:5%;
+}
+
+.modal.maximize {
+    width: 100%;
+    height: 100%;
+    margin: 0;    
+}
